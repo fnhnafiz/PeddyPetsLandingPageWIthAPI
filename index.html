@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peddy</title>
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" href="./images/logo.webp" type="image/x-icon" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS Linked -->
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <!-- Daisy UI CDN Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Icon End -->
+    <!-- Font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="lato-fonts">
+    <header>
+      <nav class="w-11/12 mx-auto mt-5">
+        <div class="navbar bg-base-100">
+          <div
+            class="navbar-start flex font-bold text-3xl gap-3 cursor-pointer"
+          >
+            <img src="./images/logo.webp" alt="" />
+            <h1>Peddy</h1>
+          </div>
+          <div class="navbar-center hidden sm:block">
+            <button
+              class="hover:bg-[#0E7A81] hover:text-white btn btn-ghost font-normal text-[16px] text-[#131313]"
+            >
+              Home
+            </button>
+            <button
+              class="hover:bg-[#0E7A81] hover:text-white btn btn-ghost font-normal text-[16px] text-[#131313]"
+            >
+              Shop
+            </button>
+            <button
+              class="hover:bg-[#0E7A81] hover:text-white btn btn-ghost font-normal text-[16px] text-[#131313]"
+            >
+              Contact US
+            </button>
+          </div>
+          <div class="navbar-end">
+            <button
+              class="btn btn-ghost btn-circle border-red-100 hover:bg-[#0E7A81]"
+            >
+              <i
+                class="ri-user-3-line text-[16px] text-[#131313] hover:text-white"
+              ></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <!-- Nav End -->
+      <div class="text-center mx-auto w-11/12 mt-10">
+        <h2 class="font-bold text-xl sm:text-2xl text-gray-400">
+          Bringing Families Together ❤️‍🔥
+        </h2>
+
+        <h1
+          class="font-bold text-4xl md:text-5xl lg:text-[72px] leading-tight mt-3 mb-6"
+        >
+          Your Path to Adoption <br />
+          Starts Here
+        </h1>
+        <p class="text-base md:px-40">
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a.
+        </p>
+        <div class="text-center mt-6">
+          <button
+            onclick="goToMainSection()"
+            class="bg-[#0E7A81] font-bold text-[20px] text-white w-[162px] h-[56px] rounded-xl hover:bg-[#16bbc7]"
+          >
+            View More
+          </button>
+        </div>
+      </div>
+      <!-- Hero image -->
+      <div class="mx-auto w-11/12 flex justify-center items-center mt-10">
+        <img src="./images/pet.webp" alt="" />
+      </div>
+    </header>
+    <!-- Main -->
+    <main id="pets-container" class="mx-auto w-11/12">
+      <h1 class="text-center text-black text-4xl font-bold">
+        Adopt Your Best Friend
+      </h1>
+      <p class="text-base text-center md:px-40 mt-6">
+        It is a long established fact that a reader will be distracted by the
+        readable content of a page when looking at its layout. The point of
+        using Lorem Ipsum is that it has a.
+      </p>
+      <!-- pets Button  -->
+      <div
+        id="pets-button-container"
+        class="text-center gap-6 justify-center items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-10"
+      ></div>
+      <!-- Descending button and text -->
+      <div class="flex justify-between mt-6 items-center">
+        <h1 class="text-black text-2xl sm:text-xl md:text-2xl font-bold">
+          Best Deal For you
+        </h1>
+        <button
+          onclick="shortPets()"
+          class="bg-[#0E7A81] font-bold text-[20px] text-white w-[162px] h-[56px] rounded-xl hover:bg-[#16bbc7]"
+        >
+          Short By Price
+        </button>
+      </div>
+      <!--Pets card Section -->
+      <section id="section-Container">
+        <div id="pets-content" class="flex gap-6 mt-8 hidden">
+          <div
+            id="Picture-container"
+            class="w-[70%] gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+          ></div>
+
+          <div id="fevContent" class="w-[30%] p-2 border rounded min-h-screen">
+            <div
+              id="fevoritePictureContainer"
+              class="grid md:grid-cols-2 gap-4 rounded-lg"
+            ></div>
+          </div>
+        </div>
+        <!-- Loading Spiner -->
+        <div id="spiner" class="flex gap-4 justify-center items-ce">
+          <span class="loading loading-dots loading-lg block"></span>
+          <span class="loading loading-dots loading-lg block"></span>
+          <span class="loading loading-dots loading-lg block"></span>
+        </div>
+      </section>
+
+      <!-- Open the modal using ID.showModal() method -->
+      <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+      <div id="modal-container"></div>
+      <!-- Adoped Modal -->
+
+      <dialog
+        id="my_modal_6"
+        class="modal modal-bottom sm:modal-middle flex justify-center items-center"
+      >
+        <div class="modal-box flex flex-col gap-5 justify-center items-center">
+          <i
+            class="ri-shake-hands-line text-5xl bg-yellow-500 rounded-full text-white p-4"
+          ></i>
+          <h3 class="text-4xl font-bold">Congrates</h3>
+          <p class="font-semibold text-base">
+            Adoption Prosses is start for your Pets
+          </p>
+          <h1 id="countDown" class="text-6xl font-bold">1</h1>
+        </div>
+        <form method="dialog" class="w-full hidden">
+          <!-- if there is a button in form, it will close the modal -->
+          <button id="mymodalclose" class="btn w-full">Cancel</button>
+        </form>
+      </dialog>
+    </main>
+    <!-- footer section -->
+    <footer class="footer py-10 mt-20 bg-black text-white">
+      <div
+        class="w-11/12 mx-auto flex gap-10 text-xl md:text-base flex-col md:flex-row justify-between pl-5 md:py-10"
+      >
+        <nav class="flex flex-col gap-4">
+          <div class="navbar-start flex font-bold text-3xl gap-3 mb-5">
+            <img src="./images/logo.webp" alt="Logo" />
+            <h1>Peddy</h1>
+          </div>
+          <a class="link link-hover"
+            >Location: av. Washington 165, NY CA 54003</a
+          >
+          <a class="link link-hover">Phone: +31 85 964 47 25</a>
+          <a class="link link-hover">Email: info@yourdomain.com</a>
+          <a class="link link-hover">Openings hours: 9.00 AM - 5.00 PM</a>
+          <!-- Social Icon -->
+          <div class="flex gap-6 mt-4">
+            <a href="#"
+              ><img src="./images/Social-Icon/facebook.png" alt="Social Icon"
+            /></a>
+            <a href="#"
+              ><img src="./images/Social-Icon/twitter.png" alt="Social Icon"
+            /></a>
+            <a href="#"
+              ><img src="./images/Social-Icon/youtube.png" alt="Social Icon"
+            /></a>
+            <a href="#"
+              ><img src="./images/Social-Icon/instagram.png" alt="Social Icon"
+            /></a>
+          </div>
+        </nav>
+        <nav class="flex flex-col gap-4">
+          <h6 class="footer-title mb-5">Useful Links</h6>
+          <a class="link link-hover">Home</a>
+          <a class="link link-hover">About Us</a>
+          <a class="link link-hover">Animals</a>
+          <a class="link link-hover">Contact</a>
+        </nav>
+
+        <div class="space-y-5">
+          <h6 class="footer-title mb-5">Drop a Message</h6>
+          <fieldset class="form-control w-80">
+            <!-- <label class="label">
+              <span class="label-text text-white">Enter your email</span>
+            </label> -->
+            <div class="join mb-5">
+              <input
+                class="rounded-xl p-5 text-gray-500 w-full"
+                type="text"
+                placeholder="Enter your email"
+                class="input input-bordered join-item"
+              />
+            </div>
+            <button
+              class="btn bg-[#0E7A81] text-white border-none text-base join-item"
+            >
+              Subscribe
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </footer>
+    <!-- End footer section -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>

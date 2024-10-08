@@ -1,0 +1,9 @@
+.activeBtn {
+  background-color: #e7f2f2;
+}
+html {
+  scroll-behavior: smooth;
+}
+.lato-fonts {
+  font-family: "Lato", sans-serif;
+}
